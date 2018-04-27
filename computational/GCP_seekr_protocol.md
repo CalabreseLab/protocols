@@ -1,4 +1,4 @@
-# SEEK on Google Cloud Platform
+# SEEKR on Google Cloud Platform
 
 This document contains details on how to setup and maintain the google cloud instance of our seekr webapp. Part of the sections are a little lacking, but hopefully they will improve over time.
 
@@ -94,19 +94,20 @@ WSGIScriptAlias / /var/www/html/seekr/app.wsgi
 Once things have been configured, restart the apache server. I'm not sure which command works, but it's one of:
 
 ```
+sudo systemctl restart apache2 #This one seems to work best
 sudo apachectl restart
 sudo service apache2 restart
-sudo systemctl restart apache2
 ```
 
 ## Checking Error files
 
-Errors get logged to a couple places. Apache errors go to:
+Errors get logged to a couple places. Apache errors usually go to:
 
 ```
 /var/log/apache2/error.log
 ```
 
+But this file gets rotated and backed up, so it's worth checking the whole folder as well.
 And errors from the seekr app can be found at:
 
 ```
