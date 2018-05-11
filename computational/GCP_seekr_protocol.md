@@ -91,6 +91,14 @@ WSGIScriptAlias / /var/www/html/seekr/app.wsgi
 </Directory>
 ```
 
+Set up an environment variable that apache2 can see. Add the line:
+
+```bash
+export FLASK_SECRET="some secret string goes here"
+```
+
+to the file `/etc/apache2/envvars`.
+
 Once things have been configured, restart the apache server. I'm not sure which command works, but it's one of:
 
 ```
