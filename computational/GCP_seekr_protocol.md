@@ -71,7 +71,7 @@ pip install -r requirements.txt
 
 # I think this gives permission for apache to execute seekr
 sudo chgrp -R www-data /var/www/html/seekr/
-sudo chmod :www-data .
+sudo chown www-data *
 vi /etc/apache2/sites-available/000-default.conf
 ```
 
