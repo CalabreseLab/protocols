@@ -45,7 +45,7 @@ click `Reserve`
 * Log into the shell by clicking `SSH` in the `Connect` column of the vm instance of interest.
   * A new window should appear with a command line.
 
-** Warning: ** We had some permission issues getting things set up. These notes likely aren't exact and should be used more as a guideline than a protocol at the moment.
+**Warning:** We had some permission issues getting things set up. These notes likely aren't exact and should be used more as a guideline than a protocol at the moment.
 
 ```bash
 
@@ -121,3 +121,32 @@ And errors from the seekr app can be found at:
 ```
 /var/www/html/seekr/seekr_server.log
 ```
+
+## Making updates
+
+This section records how to make new updates and apply bug fixes.
+
+### Set up a local environment
+
+* Clone the [seekr repository](https://github.com/CalabreseLab/seekr).
+* Make sure `FLASK_SECRET` is added to your environment.
+* Launch the server by running `python app.py`.
+
+### Make changes
+
+* Make whatever changes desired to the source.
+* Stage, commit, then push your changes to GitHub with `git`.
+
+### Pull changes into to the VM
+
+* Go to [the console](console.cloud.google.com).
+* In the menu, go to `Compute Engine` and `VM instances`.
+* Log into the shell by clicking `SSH` in the `Connect` column of the vm instance of interest.
+  * A new window should appear with a command line.
+* Do `cd seekr`
+
+### Apply changes
+
+* Do `git pull` to update the files with the changes you just made.
+* Then restart the server with `sudo systemctl restart apache2`
+* Navigate to [seekr.org](http://seekr.org/home) to test your changes!
