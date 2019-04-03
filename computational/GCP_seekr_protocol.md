@@ -8,7 +8,7 @@ Hopefully this never has to be done again.
 
 ### Setting up an instance
 
-* Go to [the console](console.cloud.google.com).
+* Go to [the console](https://console.cloud.google.com/).
 * In the menu, go to `Compute Engine` and `VM instances`.
 * Click `Create Instance`.
 
