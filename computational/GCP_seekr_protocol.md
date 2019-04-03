@@ -139,7 +139,7 @@ This section records how to make new updates and apply bug fixes.
 
 ### Pull changes into to the VM
 
-* Go to [the console](console.cloud.google.com).
+* Go to [the console](https://console.cloud.google.com/).
 * In the menu, go to `Compute Engine` and `VM instances`.
 * Log into the shell by clicking `SSH` in the `Connect` column of the vm instance of interest.
   * A new window should appear with a command line.
